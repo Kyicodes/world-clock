@@ -4,7 +4,7 @@ function updateTime() {
   let losAngelesElement = document.querySelector("#los-angeles");
   let losAngelesDateElement = document.querySelector("#la-date");
   let losAngelesTimeElement = document.querySelector("#la-time");
-  let losAngelesTime = moment().tz("UTC America/Los_Angeles");
+  let losAngelesTime = moment().tz("America/Los_Angeles");
 
   losAngelesDateElement.innerHTML = losAngelesTime.format("LL");
   losAngelesTimeElement.innerHTML = losAngelesTime.format(
