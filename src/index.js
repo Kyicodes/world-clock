@@ -25,6 +25,9 @@ function updateTime() {
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  if (cityTimeZone == "Current") {
+    cityTimeZone = moment.tz.guess();
+  }
   let cityTime = moment().tz(cityTimeZone);
   let selectedOption = citySelect.options[citySelect.selectedIndex];
   let selectedCityName = selectedOption.textContent;
